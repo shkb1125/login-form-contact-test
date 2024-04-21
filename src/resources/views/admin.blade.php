@@ -5,7 +5,10 @@
 @endsection
 
 @section('link')
-    <a href="" class="header__link">logout</a>
+    <form action="/logout" class="form" method="post">
+        @csrf
+        <button class="header-nav__button">ログアウト</button>
+    </form>
 @endsection
 
 @section('content')
@@ -19,8 +22,8 @@
         <form action="/admin" class="search-form" method="post">
             @csrf
             <div class="search-form__item">
-                <input class="search-form__item-input" type="text" name="search" placeholder="名前やメールアドレスを入力してください"
-                    value="{{ old('search') }}">
+                <input class="search-form__item-input" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください"
+                    value="{{ old('keyword') }}">
                 <select class="search-form__item-select" name="gender">
                     <option value="">性別</option>
                     <option value="1">男性</option>
@@ -42,7 +45,9 @@
 
         </form>
     </div>
-
+    <div class="pagination">
+        {{ $contacts->links() }}
+    </div>
     <div class="admin-table">
         <table class="admin-table__inner">
 
@@ -56,15 +61,37 @@
             @foreach ($contacts as $contact)
                 <tr class="admin-table__row">
                     <td class="admin-table__col">{{ $contact->last_name }} {{ $contact->first_name }}</td>
-                    <td class="admin-table__col">{{ $contact->gender }}</td>
+                    <td class="admin-table__col">
+                        {{-- フラグによって性別を表示 --}}
+                        @if ($contact->gender === 1)
+                            男性
+                        @elseif ($contact->gender === 2)
+                            女性
+                        @else
+                            その他
+                        @endif
+                    </td>
                     <td class="admin-table__col">{{ $contact->email }}</td>
                     <td class="admin-table__col">{{ $contact->category->content }}</td>
+
+                    {{-- 詳細のモーダルウィンドウ --}}
+                    <td class="admin-table__col">
+                        <input type="checkbox" class="admin-table__col-checkbox" id="modal-toggle">
+                        <label for="modal-toggle" class="admin-table__col-btn">詳細</label>
+                        {{-- モーダルウィンドウの中身 --}}
+                        <div class="admin-table__modal">
+                            <div class="admin-table__modal-content">
+                                <label for="modal-toggle" class="admin-table__modal-close">×</label>
+                                {{-- 詳細内容 --}}
+                                <p>モーダルウィンドウの内容がここに入ります。</p>
+                                
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             @endforeach
 
         </table>
-        <div class="pagination">
-            {{ $contacts->links() }}
-        </div>
+
     </div>
 @endsection

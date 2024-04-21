@@ -44,9 +44,9 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--radio">
-                        <input type="radio" name="gender" value="0" checked />男性
-                        <input type="radio" name="gender" value="1" />女性
-                        <input type="radio" name="gender" value="2" />その他
+                        <input type="radio" name="gender" value="1" checked />男性
+                        <input type="radio" name="gender" value="2" />女性
+                        <input type="radio" name="gender" value="3" />その他
                     </div>
                     <div class="form__error">
                         @error('gender')

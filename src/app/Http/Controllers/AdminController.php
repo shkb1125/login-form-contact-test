@@ -18,22 +18,16 @@ class AdminController extends Controller
     // 検索機能
     public function search(Request $request)
     {
-        $search = $request->input('search');
+        $keyword = $request->input('keyword');
         $gender = $request->input('gender');
-        $category = $request->input('category');
-        $data = $request->input('data');
+        $category_id = $request->input('category_id');
+        $date = $request->input('date');
+        // dd($date);
 
-        $contacts = Contact::ContactSearch($search, $gender, $category, $data)
-            ->Paginate(7);
+        $contacts = Contact::KeywordSearch($keyword, $gender, $category_id, $date)->paginate(7);
         $categories = Category::all();
 
         return view('admin', compact('contacts', 'categories'));
-    }
-
-    // 検索のリセット
-    public function reset()
-    {
-        return redirect('admin');
     }
 
     // エクスポート

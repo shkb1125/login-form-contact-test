@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    {{-- お問い合わせフォーム確認ページ --}}
     <div class="confirm__content">
         <div class="confirm__heading">
             <h2>Confirm</h2>
@@ -20,7 +21,6 @@
                         <td class="confirm-table__text">
                             <input type="text" name="last_name" value="{{ $content['last_name'] }}" readonly />
                             <input type="text" name="first_name" value="{{ $content['first_name'] }}" readonly />
-
                         </td>
                     </tr>
 
@@ -82,6 +82,9 @@
             </div>
             <div class="form__button">
                 <button class="form__button-submit" type="submit">送信</button>
+
+                {{-- 修正ボタン --}}
+                <input type="button" onclick="history.back()" value="修正">
             </div>
         </form>
     </div>

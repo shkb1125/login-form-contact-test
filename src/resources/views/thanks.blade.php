@@ -11,4 +11,5 @@
         </div>
     </div>
     {{-- homeボタン追加 --}}
+    <button class="home__button-submit" type="submit" onclick="location.href='http://localhost/'">HOME</button>
 @endsection
