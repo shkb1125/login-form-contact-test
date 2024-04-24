@@ -13,19 +13,20 @@
 
 @section('content')
     <div class="admin__content">
-        <div class="admin__header">
+        <div class="admin__heading">
             <h2>Admin</h2>
         </div>
     </div>
 
     <div class="admin__search">
-        <form action="/admin" class="search-form" method="post">
+        <form class="form" action="/admin" class="search-form" method="post">
             @csrf
             <div class="search-form__item">
                 <input class="search-form__item-input" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください"
                     value="{{ old('keyword') }}">
                 <select class="search-form__item-select" name="gender">
                     <option value="">性別</option>
+                    <option value="">全て</option>
                     <option value="1">男性</option>
                     <option value="2">女性</option>
                     <option value="3">その他</option>
@@ -42,12 +43,19 @@
                 <button class="search-form__button-submit" type="submit">検索</button>
                 <input type="reset" name="reset" value="リセット">
             </div>
-
         </form>
     </div>
+
+    {{-- ページネーション --}}
     <div class="pagination">
-        {{ $contacts->links() }}
+        <div class="page-item">
+            {{-- {{ $contacts->links() }} --}}
+            {{ $contacts->appends(request()->query())->links() }}
+            {{-- {{ $contacts->appends(request()->input())->links() }} --}}
+
+        </div>
     </div>
+
     <div class="admin-table">
         <table class="admin-table__inner">
 
@@ -83,8 +91,7 @@
                             <div class="admin-table__modal-content">
                                 <label for="modal-toggle" class="admin-table__modal-close">×</label>
                                 {{-- 詳細内容 --}}
-                                <p>モーダルウィンドウの内容がここに入ります。</p>
-                                
+                                <p>モーダルウィンドウの内容</p>
                             </div>
                         </div>
                     </td>
@@ -92,6 +99,5 @@
             @endforeach
 
         </table>
-
     </div>
 @endsection

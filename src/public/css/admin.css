@@ -1,3 +1,61 @@
+.admin__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    color: #867362;
+}
+
+.admin__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.admin__search {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-form__button {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* 右寄せ */
+    margin-top: 10px;
+}
+
+.pagination .page-item {
+    display: inline-block; /* ページネーションの各ページ要素を横並びにする */
+}
+
+.admin-table {
+    /* background-color: #ecd1ba; */
+    border: 1px solid #ddd;
+}
+
+.admin-table__inner {
+    width: 100%;
+}
+
+
+
+
+
+
+
 .admin-table__modal {
     display: none;
     position: fixed;
@@ -12,6 +70,7 @@
 
 .admin-table__modal-content {
     padding: 10px;
+    border: 1px solid #867362;
 }
 
 .admin-table__col-btn {

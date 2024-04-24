@@ -27,7 +27,6 @@ class Contact extends Model
         return $this->belongsTo(Category::class);
     }
 
-
     public function scopeCategorySearch($query, $category_id)
     {
         if (!empty($category_id)) {
@@ -35,13 +34,12 @@ class Contact extends Model
         }
     }
 
-
-    public function ContactSearch($searchTerm)
-    {
-        return $this->where('name', 'like', '%' . $search . '%')
-            ->orWhere('email', 'like', '%' . $searchTerm . '%')
-            ->get();
-    }
+    // public function ContactSearch($searchTerm)
+    // {
+    //     return $this->where('name', 'like', '%' . $search . '%')
+    //         ->orWhere('email', 'like', '%' . $searchTerm . '%')
+    //         ->get();
+    // }
 
     // public function scopeKeywordSearch($query, $keyword)
     // {

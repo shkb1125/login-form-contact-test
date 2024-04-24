@@ -23,10 +23,8 @@ class AdminController extends Controller
         $category_id = $request->input('category_id');
         $date = $request->input('date');
         // dd($date);
-
         $contacts = Contact::KeywordSearch($keyword, $gender, $category_id, $date)->paginate(7);
         $categories = Category::all();
-
         return view('admin', compact('contacts', 'categories'));
     }
 

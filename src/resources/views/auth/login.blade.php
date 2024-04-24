@@ -1,8 +1,3 @@
-{{-- 
-□ レイアウト：css
-□ link先への遷移
- --}}
-
 @extends('layouts.app')
 
 @section('css')
@@ -10,16 +5,21 @@
 @endsection
 
 @section('link')
-    <div class="register__link">
-        <button class="register__button-submit" type="submit"onclick="location.href='http://localhost/register'">register</button>
-        {{-- <a class="register__button-submit" href="/register">会員登録の方はこちら</a> --}}
-    </div>
+    <nav>
+        <ul class="header-nav">
+            <li class="header-nav__item">
+                <button class="register__button-submit" type="submit"
+                    onclick="location.href='http://localhost/register'">register</button>
+            </li>
+        </ul>
+    </nav>
 @endsection
 
 @section('content')
+    {{-- ログインページ --}}
     <div class="login__content">
         <div class="login-form__heading">
-            <h2>ログイン</h2>
+            <h2>Login</h2>
         </div>
         <form class="form" action="/login" method="POST">
             @csrf

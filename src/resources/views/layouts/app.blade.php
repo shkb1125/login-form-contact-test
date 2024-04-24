@@ -15,17 +15,18 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a href="/" class="header__logo">
-                FashionablyLate
-            </a>
-            @yield('link')
+            <div class="header-utilities">
+                <a href="/" class="header__logo">
+                    FashionablyLate
+                </a>
+                @yield('link')
+            </div>
         </div>
     </header>
 
     <main>
         @yield('content')
     </main>
-
 </body>
 
 </html>

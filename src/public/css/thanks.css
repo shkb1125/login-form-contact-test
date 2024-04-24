@@ -1,21 +1,4 @@
-.header {
-    background: #000;
-}
-
-.header__inner {
-    margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
-}
-
-.header__logo {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.thanks__content {
+/* .thanks__content {
     margin: 0 auto;
     padding: 30px 15px;
     max-width: 1230px;
@@ -24,4 +7,48 @@
 .thanks__heading {
     margin-bottom: 40px;
     text-align: center;
+} */
+
+* {
+    font-family: "Hiragino Mincho Pro", "MS PMincho", serif;
+}
+
+.thanks__content {
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明の白色背景 */
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    /* max-width: 1230px; */
+    margin: 100px auto;
+}
+
+.thanks__content::after {
+    content: "Thank you"; /* 表示する文字 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    color: #867362; /* 文字の色 */
+    opacity: 0.1; /* 文字の透明度 */
+}
+
+.thanks__heading {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #867362;
+}
+
+.home__button-submit {
+    /* text-align: center; */
+    padding: 10px;
+    /* width: 30%; */
+    /* height: 50px; */
+    border: none;
+    background: #867362;
+    color: #fff;
+    cursor: pointer;
+    /* margin: 10px; */
 }

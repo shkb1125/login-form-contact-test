@@ -45,7 +45,6 @@ class ContactController extends Controller
         // $category = Category::find($categoryId);
 
 
-
         // if ($request->has('content')) {
         //     $content['category'] = Category::find($request->input('content'))->content;
         //     $content['category_id'] = $request->input('content');
@@ -82,7 +81,5 @@ class ContactController extends Controller
         Contact::create($contact);
         return view('thanks');
     }
-
-
 
 }

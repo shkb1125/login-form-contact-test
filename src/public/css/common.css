@@ -1,11 +1,25 @@
+* {
+    font-family: "Hiragino Mincho Pro", "MS PMincho", serif;
+}
+
 .header {
-    background: #000;
+    /* フォント */
+    /* font-family: "Century"; */
+    /* font-family: "Hiragino Mincho Pro", "MS PMincho", serif; */
+    background: #ffffff;
+    border-bottom: solid 2px rgb(238, 237, 236);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .header__inner {
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
 }
 
 .header-utilities {
@@ -15,13 +29,21 @@
 }
 
 .header__logo {
-    color: #fff;
+    color: #867362;
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-.header-utilities nav {
+/* .link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+} */
+
+/* .header-utilities nav {
     width: 18%;
 }
 
@@ -42,4 +64,4 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-}
+} */

@@ -1,24 +1,8 @@
-.header {
-    background: #000;
-}
-
-.header__inner {
-    margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
-}
-
-.header__logo {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-}
-
 .contact-form__content {
     margin: 0 auto;
     padding: 30px 15px;
     max-width: 1230px;
+    color: #867362;
 }
 
 .contact-form__heading {
@@ -34,16 +18,71 @@
 
 .form__group {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 15px;
+    text-align: left;
+    align-items: center; /* アイテムの垂直方向の中央揃え */
+}
+
+.form__group-title {
+    width: 140px; /* ラベルの幅 */
+    /* flex-shrink: 0; ラベルが収縮しないようにする */
+}
+
+.form__group-content {
+    max-width: 600px;
+    flex: 1; /* コンテンツが残りのスペースを占有 */
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.form__label--item {
+    font-weight: bold; /* ラベルの太字 */
 }
 
 .form__label--required {
     margin-left: 5px;
-    padding: 4px 6px;
     border-radius: 3px;
-    background: #fafafa;
-    color: #aaa;
+    color: #ffa4a4;
+}
+
+.form__input--text {
+    display: flex;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    width: 100%; /* 入力フィールドの幅を100%に */
+    padding: 10px; /* 入力フィールドの余白 */
+    border: 1px solid #ccc; /* 入力フィールドのボーダー */
+    border-radius: 4px; /* 入力フィールドの角丸 */
+    /* box-sizing: border-box; ボックスサイジングをborder-boxに
+    appearance: none; */
+    background-color: #F4F4F4;
+}
+
+.form__input--text input {
+    height: 40px; /* テキスト入力フィールドの高さ */
+}
+
+.form__input--text input:not(:last-child) {
+    margin-right: 10px; /* 最後の入力フィールド以外に右マージンを追加 */
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.search-form__item-select {
+    width: 50%; /* 入力フィールドの幅を100%に */
+    padding: 10px; /* 入力フィールドの余白 */
+    border: 1px solid #ccc; /* 入力フィールドのボーダー */
+    border-radius: 4px; /* 入力フィールドの角丸 */
+    background-color: #F4F4F4;
+}
+
+.form__input--radio input[type="radio"] {
+    margin-right: 10px; /* ラジオボタンの右マージン */
 }
 
 .form__error {
@@ -52,35 +91,20 @@
     text-align: left;
 }
 
-.form__input--text input,
-.form__input--textarea textarea {
-    padding: 10px;
-    width: 600px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-
-    appearance: none;
-}
-
-.form__input--text input {
-    height: 40px;
-}
-
-.form__input--textarea textarea {
-    height: 180px;
-}
-
 .form__button {
-    margin-top: 30px;
+    margin-top: 30px; /* ボタンの上マージン */
+    text-align: center; /* ボタンのテキストを中央揃えに */
 }
 
 .form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+    padding: 10px 20px; /* ボタンのパディング */
+    border: none; /* ボタンのボーダーを削除 */
+    background-color: #82756B; /* ボタンの背景色 */
+    color: #fff; /* ボタンの文字色 */
+    cursor: pointer; /* ボタンのカーソルをポインターに */
+    transition: background-color 0.3s; /* ホバー時のトランジション */
+}
+
+.form__button-submit:hover {
+    background-color: #82756bbd; /* ホバー時の背景色 */
 }

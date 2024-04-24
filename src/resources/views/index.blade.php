@@ -15,8 +15,9 @@
             {{-- 名前入力欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">お名前</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">お名前
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
@@ -39,8 +40,9 @@
             {{-- 性別入力欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">性別</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">性別
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--radio">
@@ -59,8 +61,9 @@
             {{-- メールアドレス入力欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">メールアドレス</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">メールアドレス
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
@@ -77,8 +80,9 @@
             {{-- 電話番号入力欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">電話番号</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">電話番号
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
@@ -88,16 +92,12 @@
                         <input type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}" />
                     </div>
                     <div class="form__error">
-                        {{-- if文で条件分岐(条件：'tel'のどれか1つでも入力されていない場合はエラーメッセージを表示させる) --}}
-                        @error('tel1')
-                            {{ $message }}
-                        @enderror
-                        @error('tel2')
-                            {{ $message }}
-                        @enderror
-                        @error('tel3')
-                            {{ $message }}
-                        @enderror
+                        @if ($errors->has('tel1') || $errors->has('tel2') || $errors->has('tel3'))
+                            <div class="form__error-danger">
+                                {{ $errors->first('tel1') ?? ($errors->first('tel2') ?? $errors->first('tel3')) }}
+                            </div>
+                        @endif
+
                     </div>
                 </div>
             </div>
@@ -105,8 +105,9 @@
             {{-- 住所入力欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">住所</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">住所
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
@@ -136,8 +137,9 @@
             {{-- お問い合わせの種類選択欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">お問い合わせの種類</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">お問い合わせの種類
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--textarea">
@@ -159,8 +161,9 @@
             {{-- お問い合わせ内容入力欄 --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">お問い合わせ内容</span>
-                    <span class="form__label--required">必須</span>
+                    <span class="form__label--item">お問い合わせ内容
+                        <span class="form__label--required">※</span>
+                    </span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--textarea">

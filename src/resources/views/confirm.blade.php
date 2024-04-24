@@ -5,15 +5,13 @@
 @endsection
 
 @section('content')
-    {{-- お問い合わせフォーム確認ページ --}}
+    {{-- お問い合わせフォーム確認画面 --}}
     <div class="confirm__content">
         <div class="confirm__heading">
             <h2>Confirm</h2>
         </div>
         <form class="form" action="/thanks" method="post">
             @csrf
-            {{-- <?php print_r($category); ?> --}}
-
             <div class="confirm-table">
                 <table class="confirm-table__inner">
                     <tr class="confirm-table__row">
@@ -27,9 +25,9 @@
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">性別</th>
                         <td class="confirm-table__text">
-                            @if ($content['gender'] === '0')
+                            @if ($content['gender'] === '1')
                                 男性
-                            @elseif($content['gender'] === '1')
+                            @elseif($content['gender'] === '2')
                                 女性
                             @else
                                 その他
@@ -84,7 +82,7 @@
                 <button class="form__button-submit" type="submit">送信</button>
 
                 {{-- 修正ボタン --}}
-                <input type="button" onclick="history.back()" value="修正">
+                <input class="form__button-submit__modify" type="button" onclick="history.back()" value="修正">
             </div>
         </form>
     </div>
