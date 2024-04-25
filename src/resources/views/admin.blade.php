@@ -49,23 +49,18 @@
     {{-- ページネーション --}}
     <div class="pagination">
         <div class="page-item">
-            {{-- {{ $contacts->links() }} --}}
             {{ $contacts->appends(request()->query())->links() }}
-            {{-- {{ $contacts->appends(request()->input())->links() }} --}}
-
         </div>
     </div>
 
     <div class="admin-table">
         <table class="admin-table__inner">
-
             <tr class="admin-table__row">
                 <th class="admin-table__header">お名前</th>
                 <th class="admin-table__header">性別</th>
                 <th class="admin-table__header">メールアドレス</th>
                 <th class="admin-table__header">お問い合わせの種類</th>
             </tr>
-
             @foreach ($contacts as $contact)
                 <tr class="admin-table__row">
                     <td class="admin-table__col">{{ $contact->last_name }} {{ $contact->first_name }}</td>
@@ -81,7 +76,6 @@
                     </td>
                     <td class="admin-table__col">{{ $contact->email }}</td>
                     <td class="admin-table__col">{{ $contact->category->content }}</td>
-
                     {{-- 詳細のモーダルウィンドウ --}}
                     <td class="admin-table__col">
                         <input type="checkbox" class="admin-table__col-checkbox" id="modal-toggle">
@@ -97,7 +91,6 @@
                     </td>
                 </tr>
             @endforeach
-
         </table>
     </div>
 @endsection

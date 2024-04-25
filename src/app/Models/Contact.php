@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class Contact extends Model
 {
@@ -27,28 +26,6 @@ class Contact extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function scopeCategorySearch($query, $category_id)
-    {
-        if (!empty($category_id)) {
-            $query->where('category_id', $category_id);
-        }
-    }
-
-    // public function ContactSearch($searchTerm)
-    // {
-    //     return $this->where('name', 'like', '%' . $search . '%')
-    //         ->orWhere('email', 'like', '%' . $searchTerm . '%')
-    //         ->get();
-    // }
-
-    // public function scopeKeywordSearch($query, $keyword)
-    // {
-    //     if (!empty($keyword)) {
-    //         $query->where('content', 'like', '%' . $keyword . '%');
-    //     }
-    // }
-
-
     public function scopeKeywordSearch($query, $keyword, $gender, $category_id, $date)
     {
         if (!empty($keyword)) {
@@ -69,16 +46,6 @@ class Contact extends Model
         }
         return $query;
     }
-
-
-    // 内部結合
-    // public function getCategoryContent()
-    // {
-    //     $categoryContent = DB::table('contacts')
-    //         ->join('categories', 'contacts.category_id', '=', 'categories.id')
-    //         ->get();
-    //     return $categoryContent;
-    // }
 }
 
 

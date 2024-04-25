@@ -29,7 +29,7 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="text" name="name" value="{{ old('name') }}" />
+                        <input type="text" name="name" placeholder="例：山田　太郎" value="{{ old('name') }}" />
                     </div>
                     <div class="form__error">
                         @error('name')
@@ -44,18 +44,13 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="email" name="email" value="{{ old('email') }}" />
+                        <input type="email" name="email" placeholder="例：test@example.com" value="{{ old('email') }}" />
                     </div>
-                    {{-- @if ($error->any()) --}}
                     <div class="form__error">
-                        {{-- @foreach ($errors as $error)
-                                {{ $error }}
-                            @endforeach --}}
                         @error('email')
                             {{ $message }}
                         @enderror
                     </div>
-                    {{-- @endif --}}
                 </div>
             </div>
             <div class="form__group">
@@ -64,8 +59,7 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="password" name="password" />
-                        {{-- <input type="hidden" name="password_confirmation" /> --}}
+                        <input type="password" name="password" placeholder="例：coachtech1106" />
                     </div>
                     <div class="form__error">
                         @error('password')
@@ -78,6 +72,5 @@
                 <button class="form__button-submit" type="submit">登録</button>
             </div>
         </form>
-
     </div>
 @endsection

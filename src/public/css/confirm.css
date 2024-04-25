@@ -39,10 +39,8 @@
 }
 
 .confirm-table__text input {
-    /* width: 100%; */
     outline: none;
     border: none;
-    /* display: flex; */
     color: #867362;
 }
 

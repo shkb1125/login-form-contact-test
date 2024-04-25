@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
 // 問い合わせフォーム入力ページ
@@ -20,5 +18,5 @@ Route::post('/thanks', [ContactController::class, 'store']);
 Route::get('/admin', [AdminController::class, 'index']);
 Route::post('/admin', [AdminController::class, 'search']);
 
-// ユーザー登録後管理画面に遷移
+// ユーザー登録画面
 Route::post('/register', [RegisterController::class, 'store']);

@@ -157,10 +157,7 @@ return [
         ]),
     ],
 
-    // ユーザー登録後の画面遷移
     'redirects' => [
-        'login' => 'admin',
         'logout' => 'login',
-        // 'register' => 'login',
     ],
 ];

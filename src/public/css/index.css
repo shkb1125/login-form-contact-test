@@ -18,26 +18,22 @@
 
 .form__group {
     display: flex;
-    /* justify-content: space-between; */
     margin-bottom: 15px;
     text-align: left;
-    align-items: center; /* アイテムの垂直方向の中央揃え */
+    align-items: center; /* 垂直方向中央揃え */
 }
 
 .form__group-title {
-    width: 140px; /* ラベルの幅 */
-    /* flex-shrink: 0; ラベルが収縮しないようにする */
+    width: 140px;
 }
 
 .form__group-content {
     max-width: 600px;
-    flex: 1; /* コンテンツが残りのスペースを占有 */
-    /* display: flex;
-    justify-content: space-between; */
+    flex: 1;
 }
 
 .form__label--item {
-    font-weight: bold; /* ラベルの太字 */
+    font-weight: bold;
 }
 
 .form__label--required {
@@ -52,21 +48,19 @@
 
 .form__input--text input,
 .form__input--textarea textarea {
-    width: 100%; /* 入力フィールドの幅を100%に */
-    padding: 10px; /* 入力フィールドの余白 */
-    border: 1px solid #ccc; /* 入力フィールドのボーダー */
-    border-radius: 4px; /* 入力フィールドの角丸 */
-    /* box-sizing: border-box; ボックスサイジングをborder-boxに
-    appearance: none; */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     background-color: #F4F4F4;
 }
 
 .form__input--text input {
-    height: 40px; /* テキスト入力フィールドの高さ */
+    height: 40px;
 }
 
 .form__input--text input:not(:last-child) {
-    margin-right: 10px; /* 最後の入力フィールド以外に右マージンを追加 */
+    margin-right: 10px;
 }
 
 .form__input--textarea textarea {
@@ -74,15 +68,15 @@
 }
 
 .search-form__item-select {
-    width: 50%; /* 入力フィールドの幅を100%に */
-    padding: 10px; /* 入力フィールドの余白 */
-    border: 1px solid #ccc; /* 入力フィールドのボーダー */
-    border-radius: 4px; /* 入力フィールドの角丸 */
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     background-color: #F4F4F4;
 }
 
 .form__input--radio input[type="radio"] {
-    margin-right: 10px; /* ラジオボタンの右マージン */
+    margin-right: 10px;
 }
 
 .form__error {
@@ -92,19 +86,19 @@
 }
 
 .form__button {
-    margin-top: 30px; /* ボタンの上マージン */
-    text-align: center; /* ボタンのテキストを中央揃えに */
+    margin-top: 30px;
+    text-align: center;
 }
 
 .form__button-submit {
-    padding: 10px 20px; /* ボタンのパディング */
-    border: none; /* ボタンのボーダーを削除 */
-    background-color: #82756B; /* ボタンの背景色 */
-    color: #fff; /* ボタンの文字色 */
-    cursor: pointer; /* ボタンのカーソルをポインターに */
-    transition: background-color 0.3s; /* ホバー時のトランジション */
+    padding: 10px 20px;
+    border: none;
+    background-color: #82756B;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .form__button-submit:hover {
-    background-color: #82756bbd; /* ホバー時の背景色 */
+    background-color: #82756bbd; /* ホバー背景色 */
 }

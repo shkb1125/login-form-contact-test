@@ -22,15 +22,10 @@ class AdminController extends Controller
         $gender = $request->input('gender');
         $category_id = $request->input('category_id');
         $date = $request->input('date');
-        // dd($date);
+
+        // 検索結果のページネーション
         $contacts = Contact::KeywordSearch($keyword, $gender, $category_id, $date)->paginate(7);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }
-
-    // エクスポート
-    // public function export()
-    // {
-    //     return response()->download($filePath);
-    // }
 }

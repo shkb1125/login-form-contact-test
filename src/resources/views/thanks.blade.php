@@ -9,10 +9,6 @@
     <title>FashionablyLate</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/thanks.css') }}" />
-    {{-- webフォント --}}
-    {{-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" /> --}}
 </head>
 
 <body>
@@ -21,10 +17,7 @@
             <div class="thanks__heading">
                 <h2>お問い合わせありがとうございました</h2>
             </div>
-
         </div>
-        {{-- homeボタン追加 --}}
-        {{-- <div class="thanks__content">の中に入れるとボタンが機能しなくなる --}}
         <button class="home__button-submit" type="submit" onclick="location.href='http://localhost/'">HOME</button>
     </main>
 </body>
