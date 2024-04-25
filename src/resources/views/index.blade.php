@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    {{-- 問い合わせフォーム --}}
     <div class="contact-form__content">
         <div class="contact-form__heading">
             <h2>Contact</h2>

@@ -1,3 +1,13 @@
+.logout__button-submit {
+    width: 80px;
+    height: 30px;
+    border: solid;
+    background: #f6f6f6;
+    color: #e0d2c4;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .admin__content {
     margin: 0 auto;
     padding: 30px 15px;
@@ -38,7 +48,7 @@
 }
 
 .pagination .page-item {
-    display: inline-block; /* ページネーションの各ページ要素を横並びにする */
+    display: inline-block; /* ページネーションを横並び */
 }
 
 .admin-table {

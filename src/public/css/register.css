@@ -6,7 +6,6 @@
     color: #e0d2c4;
     cursor: pointer;
     font-weight: bold;
-
 }
 
 .register__content {
@@ -58,6 +57,7 @@
     border-radius: 3px;
     appearance: none;
     background-color: #F4F4F4;
+    color: #BEB2A6;
 }
 
 .form__button {

@@ -20,7 +20,7 @@
     display: flex;
     margin-bottom: 15px;
     text-align: left;
-    align-items: center; /* 垂直方向中央揃え */
+    align-items: center;
 }
 
 .form__group-title {
@@ -53,6 +53,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #F4F4F4;
+    color: #BEB2A6;
 }
 
 .form__input--text input {
@@ -73,10 +74,12 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #F4F4F4;
+    color: #BEB2A6;
 }
 
 .form__input--radio input[type="radio"] {
     margin-right: 10px;
+    accent-color: #8B7969;
 }
 
 .form__error {

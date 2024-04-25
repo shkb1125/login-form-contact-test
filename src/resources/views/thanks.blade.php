@@ -18,7 +18,9 @@
                 <h2>お問い合わせありがとうございました</h2>
             </div>
         </div>
-        <button class="home__button-submit" type="submit" onclick="location.href='http://localhost/'">HOME</button>
+        <div class="home__button">
+            <button class="home__button-submit" type="submit" onclick="location.href='http://localhost/'">HOME</button>
+        </div>
     </main>
 </body>
 

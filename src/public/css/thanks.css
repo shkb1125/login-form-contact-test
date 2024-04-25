@@ -29,6 +29,11 @@
     color: #867362;
 }
 
+.home__button {
+    display: flex;
+    justify-content: center;
+}
+
 .home__button-submit {
     padding: 10px;
     border: none;

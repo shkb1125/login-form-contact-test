@@ -7,11 +7,18 @@
 @section('link')
     <form action="/logout" class="form" method="post">
         @csrf
-        <button class="header-nav__button">ログアウト</button>
+        <nav>
+            <ul class="header-nav">
+                <li class="header-nav__item">
+                    <button class="logout__button-submit">ログアウト</button>
+                </li>
+            </ul>
+        </nav>
     </form>
 @endsection
 
 @section('content')
+    {{-- 管理画面 --}}
     <div class="admin__content">
         <div class="admin__heading">
             <h2>Admin</h2>
