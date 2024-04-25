@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CsvDownloadController;
 
 // 問い合わせフォーム入力ページ
 Route::get('/', [ContactController::class, 'index']);
@@ -20,3 +21,6 @@ Route::post('/admin', [AdminController::class, 'search']);
 
 // ユーザー登録画面
 Route::post('/register', [RegisterController::class, 'store']);
+
+// エクスポート機能
+Route::post('/csv-download', [CsvDownloadController::class, 'csvExport']);
