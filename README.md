@@ -21,7 +21,7 @@
 ・MySQL 8.0.26  
 
 ## ER図
-![contact drawio](https://github.com/shkb1125/test-login-form/assets/158729607/e72ade56-235d-4332-aa7b-a4f2c5721e83)
+![contact drawio](https://github.com/shkb1125/login-form-contact-test/assets/158729607/81256fcb-c32c-4da5-9dbd-c484fd90339f)
 
 ## URL
 ・開発環境：http://localhost/  
