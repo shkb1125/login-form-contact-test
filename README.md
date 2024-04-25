@@ -3,8 +3,8 @@
 ## 環境構築
 
 ### Dockerビルド
-1. git clone リンク
-2. docker-compose up -d --build
+1. git clone git@github.com:shkb1125/login-form-contact-test.git
+2. docker-compose up -d --build  
 ※MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせて「docker-compose.yml」ファイルを編集してください。
 
 ### Laeavel環境構築
@@ -16,9 +16,9 @@
 6. php artisan db:seed
 
 ## 使用技術(実行環境)
-・PHP 8.0  
-・Laravel 10.0  
-・MySQL 8.0  
+・PHP 7.4.9  
+・Laravel 8  
+・MySQL 8.0.26  
 
 ## ER図
 ![contact drawio](https://github.com/shkb1125/test-login-form/assets/158729607/e72ade56-235d-4332-aa7b-a4f2c5721e83)
